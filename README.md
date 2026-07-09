@@ -105,13 +105,14 @@ terraform destroy
 - Diferença entre State Local e State Remoto
 - Estrutura necessária para utilização de Backend S3
 - Preparação de uma infraestrutura compartilhada para armazenamento remoto do Terraform State.
+- Migração do Terraform State do backend local para o backend remoto utilizando `terraform init -migrate-state`
 
 ### Amazon S3
 
 - Criação de bucket privado
 - Configuração de criptografia em repouso (SSE-S3)
 - Bloqueio de acesso público
-- Organização para armazenamento de múltiplos arquivos Terraform State utilizando diferentes chaves (`key`)
+- Organização do armazenamento de múltiplos arquivos Terraform State utilizando diferentes chaves (`key`)
 
 ### Boas Práticas
 
@@ -138,8 +139,7 @@ Após o provisionamento são disponibilizadas informações importantes para int
 - [x] Configurar bloqueio de acesso público
 - [x] Configurar criptografia em repouso
 - [x] Criar outputs
-- [ ] Configurar Backend Remoto utilizando este bucket
-- [ ] Migrar o Terraform State do projeto principal para o backend remoto
+- [x] Configurar Backend Remoto utilizando este bucket
 
 ---
 
@@ -191,6 +191,7 @@ terraform {
 
 }
 ```
+Cada projeto mantém seu próprio arquivo Terraform State, preservando o isolamento entre as infraestruturas enquanto compartilham o mesmo backend remoto.
 
 ---
 
