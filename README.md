@@ -171,7 +171,7 @@ Durante este projeto foram praticados conceitos amplamente utilizados em ambient
 
 Este projeto faz parte da série de laboratórios **DevOps Journey** e fornece a infraestrutura compartilhada utilizada como backend remoto do Terraform.
 
-### Projetos que utilizam este backend
+### Projetos Integrados
 
 - ✅ [aws-devops-website-lab](https://github.com/HELENA-HOS/aws-devops-website-lab)
 
