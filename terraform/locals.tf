@@ -5,7 +5,7 @@ locals {
     Environment = var.environment
     Provisioned = "Terraform"
     Repository  = var.repository_url
-    
+
   }
 
 
