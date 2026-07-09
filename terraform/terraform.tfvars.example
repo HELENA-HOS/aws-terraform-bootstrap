@@ -1,0 +1,8 @@
+
+
+repository_url = "YOUR_GITHUB_REPO_URL"
+
+environment = "dev"
+
+bucket_name = "YOUR_S3_BUCKET_NAME"
+
